@@ -1,0 +1,19 @@
+Create a magic file school.mgc that can be used with the command file to detect School data files. School data files always contain the string SCHOOL at offset 0.
+
+
+- First add this command to the magic file, in this case "school.mgc" the following code
+
+#!/bin/bash
+0 string SCHOOL School data
+!:mime School
+
+
+- and grant it the 'execution permission' by running 
+
+sudo chmod +x school.mgc
+
+
+
+- Then run the following command on the command line
+
+file -C -m school.mgc
