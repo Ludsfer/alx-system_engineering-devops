@@ -1,5 +1,5 @@
-# Install flask with pip3
-package { 'flask':
+# Using a puppet manifest to install flask v2.1.0 from pip3.
+package {'flask':
   ensure   => '2.1.0',
   provider => 'pip3',
 }
