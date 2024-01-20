@@ -1,4 +1,4 @@
-# Using pupet to install flask with pip3
+# Install flask with pip3
 
 package { 'flask':
   ensure   => '2.1.0',
