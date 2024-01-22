@@ -1,0 +1,10 @@
+# SSH client configuration to authenticate ANY USER to a server without password
+# To apply this config to a specific user, replace `*` with the USER name
+
+Host *
+    SendEvn LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
