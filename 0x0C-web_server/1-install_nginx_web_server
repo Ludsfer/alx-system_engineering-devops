@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# A script that installs nginx server on ubuntu.
+# The web server listens to port 80 (HTTP) for connection
+# and display `hello world` at the root with HTTP GET request.
+
+sudo apt-get update -y
+
+sudo apt-get install nginx -y
+
+echo 'Hello World!' > /var/www/html/index.html
+
+service nginx restart
