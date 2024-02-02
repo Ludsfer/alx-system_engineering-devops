@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Requirements:
+# Nginx must be running, and listening on port 80 of all the server’s active IPv4 IPs
+# Write a Bash script that configures a server to the above requirements
+# Browse to the site-enabled folder for Nginx
+cd /etc/nginx/sites-enabled/ || exit;
+# Delete default
+rm default;
+# create symbolic link to the default file in site-available
+ln -s /etc/nginx/sites-available/default default;
+# Restart Nginx
+service nginx restart
