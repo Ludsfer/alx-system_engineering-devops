@@ -1,3 +1,4 @@
+#!/usr/bin/puppet
 # Using a puppet to install flask v2.1.0 from pip3 
 
 package {'flask':
