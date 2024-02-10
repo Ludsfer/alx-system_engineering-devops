@@ -35,6 +35,7 @@ defaults
 frontend haproxy_balancer
     bind *:80
     bind *:443 ssl crt /etc/haproxy/certs/www.edge-dev.tech.pem
+    http-request set-header X-Forwarded-Proto https
     redirect scheme https if !{ ssl_fc }
     default_backend webservers
     
