@@ -39,6 +39,7 @@ defaults
 listen 19018-lb-01
         bind *:80
         bind *:443 ssl crt /etc/haproxy/certs/www.edge-dev.tech.pem
+	http-request set-header X-Forwarded-Proto https
         redirect scheme https code 301 if !{ ssl_fc }
         balance roundrobin
     	server 95294-web-01 34.204.81.18:80 check
