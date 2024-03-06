@@ -6,7 +6,8 @@ import requests
 
 def number_of_subscribers(subreddit):
     """ returns 0 if not a valid subreddit, else
-    returns the number of subscribers """
+    returns the number of subscribers
+    """
 
     if subreddit is None or type(subreddit) is not str:
         return 0
