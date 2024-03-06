@@ -5,9 +5,9 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    """returns 0 if not a valid subreddit, else
-    returnsthe number of subscribers
-    """
+    """ returns 0 if not a valid subreddit, else
+    returns the number of subscribers """
+
     if subreddit is None or type(subreddit) is not str:
         return 0
     r = requests.get('http://www.reddit.com/r/{}/about.json'.format(subreddit),
