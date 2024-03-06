@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-""" A script that returns the number of subscribers """
+"""
+Contains the number_of_subscribers function
+"""
 
 import requests
 
 
 def number_of_subscribers(subreddit):
-    """ returns 0 if not a valid subreddit, else
-    returns the number of subscribers
-    """
-
+    """returns the number of subscribers for a given subreddit"""
     if subreddit is None or type(subreddit) is not str:
         return 0
     r = requests.get('http://www.reddit.com/r/{}/about.json'.format(subreddit),
