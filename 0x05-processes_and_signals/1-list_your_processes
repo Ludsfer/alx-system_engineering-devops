@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Print the list of the ongoing running processes
+ps -A xuf
