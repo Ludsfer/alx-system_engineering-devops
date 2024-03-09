@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Write indefinitely `I am alive!` to /tmp/my_process
+# with a delay of 2 seconds between iteration
+while true; do
+	echo "I am alive!" > /tmp/my_process
+	sleep 2
+done
